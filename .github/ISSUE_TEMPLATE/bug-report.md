@@ -1,39 +1,83 @@
----
 name: Bug Report
-about: Create a report to help us improve
-title: "[Bug] <Issue Name Here>"
-labels: bug
-assignees: ''
-
----
-
-**Describe the bug**
-A clear and concise description of what the bug is.
-e.g.
-The server crashes when you attempt to run `/test` and click the Diamond Axe on the Events server.
-
-**Effected Server(s)**
-<!-- Put an 'x' in the affected servers betwene the [ ] -->
-- [ ] Practice server
-- [x] Events server
-- [ ] Duels server 
-
-**To Reproduce**
-Steps to reproduce the behavior:
-e.g.
-1. Run command `/test`
-2. Try and click Diamond Axe
-3. Server crashes !!!!
-
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots or clips**
-If applicable, add screenshots to help explain your problem.
-
-**Your client:**
-- 🆚 Version: (1.21.1)
-- 📳 Brand: (Vanilla)
-
-**Additional context**
-No additional context
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: [PvPHubLLC/8]
+#assignees:
+#  - octocat
+body:
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Duplicate Issue Check
+      options:
+        - label: I have checked that an issue similar to this is not already open already!
+          required: true
+  - type: markdown
+    attributes:
+      value: "Bug Report"
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: servers
+    attributes:
+      label: What server(s) are you seeing the problem on?
+      multiple: true
+      options:
+        - Practice
+        - Events
+        - Duels
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "# Client Information"
+  - type: dropdown
+    id: client_brand
+    attributes:
+      label: Client Brand
+      description: What client were you running?
+      options:
+        - Vanilla
+        - Feather Client
+        - Lunar Client
+        - Other (Please specify in steps to reproduce section)
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: client_version
+    attributes:
+      label: Client Version
+      description: What version of Minecraft are you running?
+      options:
+        - Older than 1.19.4
+        - 1.19.4
+        - 1.20
+        - 1.20.1
+        - 1.20.2
+        - 1.20.3
+        - 1.20.4
+        - 1.21
+        - 1.21.1
+        - 1.21.2
+        - 1.21.3
+        - 1.21.4
+        - Other (Please specify in steps to reproduce section)
+      default: 8
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Please describe steps to reproduce.
+      placeholder: 1. Start typing...
+      value: "1. "
