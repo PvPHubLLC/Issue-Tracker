@@ -14,4 +14,4 @@ These issues may require back and forth feedback between the submitter and maint
 
 Your issues will be **reviewed and be accepted or rejected**. We will provide **progress** on your issue or suggestion as it is implemented.
 
-<a href="https://github.com/PvPHubLLC/Issue-Tracker/issues/new"><p>✒️ Submit issue</p></a>
+<a href="https://github.com/PvPHubLLC/Issue-Tracker/issues/new">✒️ Submit issue</a>
