@@ -15,14 +15,13 @@ body:
           required: true
   - type: markdown
     attributes:
-      value: "Bug Report"
+      value: "# Server Information"
   - type: textarea
     id: what-happened
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen?
+      description: Briefly tell us what happened
       placeholder: Tell us what you see!
-      value: "A bug happened!"
     validations:
       required: true
   - type: dropdown
@@ -36,6 +35,13 @@ body:
         - Duels
     validations:
       required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Please describe steps to reproduce.
+      placeholder: 1. Start typing...
+      value: "1. "
   - type: markdown
     attributes:
       value: "# Client Information"
@@ -74,10 +80,3 @@ body:
       default: 8
     validations:
       required: true
-  - type: textarea
-    id: reproduce
-    attributes:
-      label: Steps to reproduce
-      description: Please describe steps to reproduce.
-      placeholder: 1. Start typing...
-      value: "1. "
