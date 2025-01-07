@@ -42,6 +42,12 @@ body:
       description: Please describe steps to reproduce.
       placeholder: 1. Start typing...
       value: "1. "
+  - type: input
+    id: clips
+    attributes:
+      label: Clips or screenshots
+      description: If you have any clips or screenshots, they would greatly help our investigation.
+      placeholder: Media Link(s)
   - type: markdown
     attributes:
       value: "# Client Information"
