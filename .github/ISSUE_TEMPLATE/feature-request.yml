@@ -17,7 +17,6 @@ body:
     id: type
     attributes:
       label: What would you like to do?
-      multiple: true
       options:
         - Request a new Feature
         - Alter an existing feature
