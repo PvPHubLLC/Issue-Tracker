@@ -1,20 +1,36 @@
----
 name: Feature Request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
-
----
-
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
-
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
-
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
+description: Request for a new feature to be added, or an existing one altered.
+title: "[Feature]: "
+labels: ["feature", "triage"]
+projects: [PvPHubLLC/8]
+#assignees:
+#  - octocat
+body:
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Duplicate Feature Check
+      options:
+        - label: I have checked that an issue feature to this is not already open already!
+          required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: What would you like to do?
+      multiple: true
+      options:
+        - Request a new Feature
+        - Alter an existing feature
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description
+      description: Describe what you want the feature for, how it should behave, and why it should be added.
+    validations:
+      required: true
+  - type: input
+    id: clips
+    attributes:
+      label: Examples
+      description: If you have it, please provide an example of what you want, or any other servers which implement it.
+      placeholder: Media Link(s)
